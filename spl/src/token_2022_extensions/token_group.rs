@@ -14,7 +14,7 @@ pub fn token_group_initialize<'info>(
         ctx.accounts.mint.key,
         ctx.accounts.mint_authority.key,
         update_authority,
-        max_size,
+        max_size as u64,
     );
     anchor_lang::solana_program::program::invoke_signed(
         &ix,
